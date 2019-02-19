@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>584493578665-kb8k036frn0jnnoqv5q5vr7df42je6n9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.584493578665-kb8k036frn0jnnoqv5q5vr7df42je6n9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAnA7-biehG9WpPD1fmJs16dAg_3566vf0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>584493578665</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>abbiocco.adroitalliance.ios</string>
+	<key>PROJECT_ID</key>
+	<string>foodcampfinal</string>
+	<key>STORAGE_BUCKET</key>
+	<string>foodcampfinal.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:584493578665:ios:56eeab11ef0666cd</string>
+	<key>DATABASE_URL</key>
+	<string>https://foodcampfinal.firebaseio.com</string>
+</dict>
+</plist>
