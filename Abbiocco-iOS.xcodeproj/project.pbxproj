@@ -100,7 +100,7 @@
 				78B15DEE221C38CD00264D75 /* Abbiocco-iOS.entitlements */,
 				5C2F1E562219326900CA8154 /* Main.storyboard */,
 				5C2F1E522219326900CA8154 /* AppDelegate.swift */,
-				5C2F1E542219326900CA8154 /* SignupVC.swift */,
+				78B15DEF221C664A00264D75 /* Controller */,
 				5CDF315B221AC7F1004017E4 /* HomeViewController.swift */,
 				78590A77221BF794004C7552 /* Model */,
 				5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */,
@@ -109,7 +109,6 @@
 				5C2F1E732219784200CA8154 /* NotificationsViewController.swift */,
 				5C2F1E71221972FF00CA8154 /* SearchViewController.swift */,
 				5C2F1E6F22194F2200CA8154 /* ForgotPasswordViewController.swift */,
-				5C2F1E6D22194B2700CA8154 /* LoginViewController.swift */,
 				5C2F1E6B221943C700CA8154 /* CoreExtensions.swift */,
 				5C2F1E5C2219327000CA8154 /* Assets.xcassets */,
 				5C2F1E5E2219327000CA8154 /* LaunchScreen.storyboard */,
@@ -135,6 +134,15 @@
 				78B15DEA221C376F00264D75 /* SignupModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		78B15DEF221C664A00264D75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C2F1E542219326900CA8154 /* SignupVC.swift */,
+				5C2F1E6D22194B2700CA8154 /* LoginViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

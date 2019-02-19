@@ -61,8 +61,7 @@ class SignupVC: UIViewController {
                 print("\n\nUPDATE SUCCESSFUL")
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Landing") as UIViewController
                 self.present(viewController, animated: true, completion: nil)
-                //self.navigationController?.pushViewController(vc, animated: true)
-               // self.performSegue(withIdentifier: "Landing", sender: nil)
+   
             }
         }
 
