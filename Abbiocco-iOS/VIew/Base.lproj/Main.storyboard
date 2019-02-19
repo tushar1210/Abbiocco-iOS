@@ -370,7 +370,7 @@
                                             <constraint firstAttribute="height" constant="2" id="3r8-LD-9GZ"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1U6-jn-IlC">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1U6-jn-IlC">
                                         <rect key="frame" x="5" y="25" width="301" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="Dca-OL-nqt"/>
@@ -417,7 +417,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="wDl-d0-G0g"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rb9-Cn-9qg">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rb9-Cn-9qg">
                                         <rect key="frame" x="5" y="25" width="304" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="z70-gB-gbd"/>
@@ -600,7 +600,7 @@
                                             <constraint firstAttribute="height" constant="2" id="ePT-7Y-i5R"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkK-K7-SM5">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkK-K7-SM5">
                                         <rect key="frame" x="5" y="25" width="301" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="UAV-QV-8hI"/>
@@ -2851,7 +2851,6 @@
         <image name="user" width="192" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IUv-Ll-pXh"/>
         <segue reference="IJV-f9-zb8"/>
         <segue reference="SgZ-Vg-PAK"/>
         <segue reference="Xou-VI-gWQ"/>
