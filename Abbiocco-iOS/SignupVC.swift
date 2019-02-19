@@ -59,6 +59,10 @@ class SignupVC: UIViewController {
             }
             else{
                 print("\n\nUPDATE SUCCESSFUL")
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Landing") as UIViewController
+                self.present(viewController, animated: true, completion: nil)
+                //self.navigationController?.pushViewController(vc, animated: true)
+               // self.performSegue(withIdentifier: "Landing", sender: nil)
             }
         }
 
@@ -69,7 +73,7 @@ class SignupVC: UIViewController {
         if nameField.text?.isEmpty == false && emailField.text?.isEmpty == false && passwordField.text?.isEmpty == false && mobileField.text?.isEmpty == false{
             let range=NSRange(location: 0, length: 10)
             
-                let regex = try! NSRegularExpression(pattern: "[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")
+            let regex = try! NSRegularExpression(pattern: "[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")
          
             
             if mobileField.text?.count==10 && regex.firstMatch(in: mobileField.text!, options: [], range: range) != nil{
