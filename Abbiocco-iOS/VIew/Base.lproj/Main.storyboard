@@ -313,7 +313,7 @@
         <!--Login View Controller-->
         <scene sceneID="mvd-Ct-aFf">
             <objects>
-                <viewController id="3ha-Cc-U7S" customClass="LoginViewController" customModule="Abbiocco_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3ha-Cc-U7S" customClass="LoginViewController" customModule="Abbiocco_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mIM-fj-m48">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -678,6 +678,9 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetButton:" destination="iBN-Tq-r5f" eventType="touchUpInside" id="pf4-VJ-HhW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -702,6 +705,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yhY-Mb-gur"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="vkK-K7-SM5" id="fb9-5a-KWx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1y4-UI-ZfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
