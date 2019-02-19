@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C2F1E532219326900CA8154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E522219326900CA8154 /* AppDelegate.swift */; };
+		5C2F1E552219326900CA8154 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E542219326900CA8154 /* SignupVC.swift */; };
+		5C2F1E582219326900CA8154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F1E562219326900CA8154 /* Main.storyboard */; };
+		5C2F1E5B2219326900CA8154 /* Abbiocco_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E592219326900CA8154 /* Abbiocco_iOS.xcdatamodeld */; };
+		5C2F1E5D2219327000CA8154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F1E5C2219327000CA8154 /* Assets.xcassets */; };
+		5C2F1E602219327000CA8154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F1E5E2219327000CA8154 /* LaunchScreen.storyboard */; };
+		5C2F1E6C221943C700CA8154 /* CoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E6B221943C700CA8154 /* CoreExtensions.swift */; };
+		5C2F1E6E22194B2700CA8154 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E6D22194B2700CA8154 /* LoginViewController.swift */; };
+		5C2F1E7022194F2200CA8154 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E6F22194F2200CA8154 /* ForgotPasswordViewController.swift */; };
+		5C2F1E722219730000CA8154 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E71221972FF00CA8154 /* SearchViewController.swift */; };
+		5C2F1E742219784200CA8154 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E732219784200CA8154 /* NotificationsViewController.swift */; };
+		5C2F1E7622197EBD00CA8154 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E7522197EBD00CA8154 /* ProfileViewController.swift */; };
+		5CDF31562219BA6E004017E4 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF31552219BA6E004017E4 /* RestaurantViewController.swift */; };
+		5CDF3158221AA837004017E4 /* food_and_gold.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF3157221AA837004017E4 /* food_and_gold.jpg */; };
+		5CDF315A221AAD47004017E4 /* FavourtiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */; };
+		5CDF315C221AC7F1004017E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF315B221AC7F1004017E4 /* HomeViewController.swift */; };
+		5D1FF900A40C3680A51D41FF /* Pods_Abbiocco_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1A7500544A8F10FC9787B9 /* Pods_Abbiocco_iOS.framework */; };
+		78590A76221BF51F004C7552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78590A75221BF51F004C7552 /* GoogleService-Info.plist */; };
+		78590A79221BF7A1004C7552 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78590A78221BF7A1004C7552 /* SignupModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		420233361CB1D51493E9269B /* Pods-Abbiocco-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abbiocco-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abbiocco-iOS/Pods-Abbiocco-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5C2F1E4F2219326900CA8154 /* Abbiocco-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Abbiocco-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2F1E522219326900CA8154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C2F1E542219326900CA8154 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		5C2F1E572219326900CA8154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C2F1E5A2219326900CA8154 /* Abbiocco_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Abbiocco_iOS.xcdatamodel; sourceTree = "<group>"; };
+		5C2F1E5C2219327000CA8154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C2F1E5F2219327000CA8154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C2F1E612219327000CA8154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2F1E6B221943C700CA8154 /* CoreExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreExtensions.swift; sourceTree = "<group>"; };
+		5C2F1E6D22194B2700CA8154 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5C2F1E6F22194F2200CA8154 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		5C2F1E71221972FF00CA8154 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5C2F1E732219784200CA8154 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		5C2F1E7522197EBD00CA8154 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5CDF31552219BA6E004017E4 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		5CDF3157221AA837004017E4 /* food_and_gold.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food_and_gold.jpg; sourceTree = "<group>"; };
+		5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavourtiesViewController.swift; sourceTree = "<group>"; };
+		5CDF315B221AC7F1004017E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		78590A75221BF51F004C7552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78590A78221BF7A1004C7552 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		78590A7A221C0AA3004C7552 /* Abbiocco-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Abbiocco-iOS.entitlements"; sourceTree = "<group>"; };
+		DF1A7500544A8F10FC9787B9 /* Pods_Abbiocco_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abbiocco_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F29B1D34481A054F18F8C16E /* Pods-Abbiocco-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abbiocco-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abbiocco-iOS/Pods-Abbiocco-iOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C2F1E4C2219326900CA8154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1FF900A40C3680A51D41FF /* Pods_Abbiocco_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44C8C54308A9EB74DF0AC4D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				420233361CB1D51493E9269B /* Pods-Abbiocco-iOS.debug.xcconfig */,
+				F29B1D34481A054F18F8C16E /* Pods-Abbiocco-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C2F1E462219326900CA8154 = {
+			isa = PBXGroup;
+			children = (
+				5C2F1E512219326900CA8154 /* Abbiocco-iOS */,
+				5C2F1E502219326900CA8154 /* Products */,
+				44C8C54308A9EB74DF0AC4D7 /* Pods */,
+				5C5ED8C5B7934B84F5FE8CD0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5C2F1E502219326900CA8154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C2F1E4F2219326900CA8154 /* Abbiocco-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C2F1E512219326900CA8154 /* Abbiocco-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				78590A7A221C0AA3004C7552 /* Abbiocco-iOS.entitlements */,
+				5C2F1E562219326900CA8154 /* Main.storyboard */,
+				5C2F1E522219326900CA8154 /* AppDelegate.swift */,
+				5C2F1E542219326900CA8154 /* SignupVC.swift */,
+				5CDF315B221AC7F1004017E4 /* HomeViewController.swift */,
+				78590A77221BF794004C7552 /* Model */,
+				5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */,
+				5CDF31552219BA6E004017E4 /* RestaurantViewController.swift */,
+				5C2F1E7522197EBD00CA8154 /* ProfileViewController.swift */,
+				5C2F1E732219784200CA8154 /* NotificationsViewController.swift */,
+				5C2F1E71221972FF00CA8154 /* SearchViewController.swift */,
+				5C2F1E6F22194F2200CA8154 /* ForgotPasswordViewController.swift */,
+				5C2F1E6D22194B2700CA8154 /* LoginViewController.swift */,
+				5C2F1E6B221943C700CA8154 /* CoreExtensions.swift */,
+				5C2F1E5C2219327000CA8154 /* Assets.xcassets */,
+				5C2F1E5E2219327000CA8154 /* LaunchScreen.storyboard */,
+				5C2F1E612219327000CA8154 /* Info.plist */,
+				78590A75221BF51F004C7552 /* GoogleService-Info.plist */,
+				5CDF3157221AA837004017E4 /* food_and_gold.jpg */,
+				5C2F1E592219326900CA8154 /* Abbiocco_iOS.xcdatamodeld */,
+			);
+			path = "Abbiocco-iOS";
+			sourceTree = "<group>";
+		};
+		5C5ED8C5B7934B84F5FE8CD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF1A7500544A8F10FC9787B9 /* Pods_Abbiocco_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78590A77221BF794004C7552 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78590A78221BF7A1004C7552 /* SignupModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C2F1E4E2219326900CA8154 /* Abbiocco-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C2F1E642219327000CA8154 /* Build configuration list for PBXNativeTarget "Abbiocco-iOS" */;
+			buildPhases = (
+				75F547CB4659F725BCA44D75 /* [CP] Check Pods Manifest.lock */,
+				5C2F1E4B2219326900CA8154 /* Sources */,
+				5C2F1E4C2219326900CA8154 /* Frameworks */,
+				5C2F1E4D2219326900CA8154 /* Resources */,
+				67150D171E9EB2C7124B9680 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Abbiocco-iOS";
+			productName = "Abbiocco-iOS";
+			productReference = 5C2F1E4F2219326900CA8154 /* Abbiocco-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C2F1E472219326900CA8154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Noirdemort;
+				TargetAttributes = {
+					5C2F1E4E2219326900CA8154 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 5C2F1E4A2219326900CA8154 /* Build configuration list for PBXProject "Abbiocco-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C2F1E462219326900CA8154;
+			productRefGroup = 5C2F1E502219326900CA8154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C2F1E4E2219326900CA8154 /* Abbiocco-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C2F1E4D2219326900CA8154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2F1E602219327000CA8154 /* LaunchScreen.storyboard in Resources */,
+				5C2F1E5D2219327000CA8154 /* Assets.xcassets in Resources */,
+				78590A76221BF51F004C7552 /* GoogleService-Info.plist in Resources */,
+				5C2F1E582219326900CA8154 /* Main.storyboard in Resources */,
+				5CDF3158221AA837004017E4 /* food_and_gold.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67150D171E9EB2C7124B9680 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Abbiocco-iOS/Pods-Abbiocco-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abbiocco-iOS/Pods-Abbiocco-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75F547CB4659F725BCA44D75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Abbiocco-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C2F1E4B2219326900CA8154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2F1E6C221943C700CA8154 /* CoreExtensions.swift in Sources */,
+				5CDF31562219BA6E004017E4 /* RestaurantViewController.swift in Sources */,
+				5C2F1E722219730000CA8154 /* SearchViewController.swift in Sources */,
+				5C2F1E552219326900CA8154 /* SignupVC.swift in Sources */,
+				5C2F1E7022194F2200CA8154 /* ForgotPasswordViewController.swift in Sources */,
+				5C2F1E5B2219326900CA8154 /* Abbiocco_iOS.xcdatamodeld in Sources */,
+				5C2F1E6E22194B2700CA8154 /* LoginViewController.swift in Sources */,
+				5C2F1E7622197EBD00CA8154 /* ProfileViewController.swift in Sources */,
+				5C2F1E532219326900CA8154 /* AppDelegate.swift in Sources */,
+				5CDF315A221AAD47004017E4 /* FavourtiesViewController.swift in Sources */,
+				78590A79221BF7A1004C7552 /* SignupModel.swift in Sources */,
+				5C2F1E742219784200CA8154 /* NotificationsViewController.swift in Sources */,
+				5CDF315C221AC7F1004017E4 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5C2F1E562219326900CA8154 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C2F1E572219326900CA8154 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C2F1E5E2219327000CA8154 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C2F1E5F2219327000CA8154 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C2F1E622219327000CA8154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C2F1E632219327000CA8154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C2F1E652219327000CA8154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 420233361CB1D51493E9269B /* Pods-Abbiocco-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Abbiocco-iOS/Abbiocco-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDDB7WX63J;
+				INFOPLIST_FILE = "Abbiocco-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abbiocco.adroitalliance.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C2F1E662219327000CA8154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F29B1D34481A054F18F8C16E /* Pods-Abbiocco-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Abbiocco-iOS/Abbiocco-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDDB7WX63J;
+				INFOPLIST_FILE = "Abbiocco-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abbiocco.adroitalliance.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C2F1E4A2219326900CA8154 /* Build configuration list for PBXProject "Abbiocco-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2F1E622219327000CA8154 /* Debug */,
+				5C2F1E632219327000CA8154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C2F1E642219327000CA8154 /* Build configuration list for PBXNativeTarget "Abbiocco-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2F1E652219327000CA8154 /* Debug */,
+				5C2F1E662219327000CA8154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C2F1E592219326900CA8154 /* Abbiocco_iOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C2F1E5A2219326900CA8154 /* Abbiocco_iOS.xcdatamodel */,
+			);
+			currentVersion = 5C2F1E5A2219326900CA8154 /* Abbiocco_iOS.xcdatamodel */;
+			path = Abbiocco_iOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5C2F1E472219326900CA8154 /* Project object */;
+}
