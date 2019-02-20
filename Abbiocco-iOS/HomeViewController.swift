@@ -2,12 +2,14 @@
 //  HomeViewController.swift
 //  Abbiocco-iOS
 //
-//  Created by Noirdemort on 18/02/19.
-//  Copyright © 2019 Noirdemort. All rights reserved.
+//  Created by Tushar Singh on 20/02/19.
+//  Copyright © 2019 Tushar Singh. All rights reserved.
 //
 
 import UIKit
 import Firebase
+import SwiftyJSON
+import SVProgressHUD
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -20,9 +22,17 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var newItemsCollection: UICollectionView!
     @IBOutlet weak var trendingCollection: UICollectionView!
     
+    var modelObject = ResturantModel()
+    var json:JSON=[]
+    let ref = Database.database().reference()
+    var dataRecieved = false
+    var resturantNameArray:[String] = []
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        get()
         foodTypeCollection.dataSource = self
         foodTypeCollection.delegate = self
         
@@ -46,12 +56,49 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Do any additional setup after loading the view.
     }
     
+    func get(){
+        SVProgressHUD.setBackgroundColor(.clear)
+        SVProgressHUD.setForegroundColor(.yellow)
+        SVProgressHUD.show()
+        self.view.isUserInteractionEnabled = false
+        self.ref.observe(.value) { (data) in
+            
+            print("DATA Recieved")
+            
+            self.dataRecieved = true
+            self.assgin(data: JSON(data.value))
+            
+        }
+    }
+    
+    func assgin(data:JSON){
+        json = data
+        for (key,subJSON):(String,JSON) in json["restaurants"]{
+            modelObject.name = key
+            resturantNameArray.append(modelObject.name!)
+        }
+        
+        foodTypeCollection.reloadData()
+        restaurantCollection.reloadData()
+        recommendedCollection.reloadData()
+        cuisineCollection.reloadData()
+        popularCollection.reloadData()
+        newItemsCollection.reloadData()
+        trendingCollection.reloadData()
+        SVProgressHUD.dismiss()
+        self.view.isUserInteractionEnabled = true
+        
+        
+        
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         let style:UIStatusBarStyle = .lightContent
         return style
     }
     
+
+
 
 
 
@@ -131,7 +178,7 @@ class TrendingCell: UICollectionViewCell{
     @IBOutlet weak var foodImage: UIImageView!
 }
 
-
+//MARK: - UIelements
 extension HomeViewController{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -143,7 +190,6 @@ extension HomeViewController{
             let cell: FoodTypeCell = foodTypeCollection.dequeueReusableCell(withReuseIdentifier: "foodTypeCell", for: indexPath) as! FoodTypeCell
             cell.foodImage.image = UIImage(named: "food_and_gold")
             cell.foodImage.layer.cornerRadius = cell.foodImage.frame.size.width/2
-            
             cell.foodName.text = "Food name"
             return cell
         } else if (collectionView == self.restaurantCollection){

@@ -10,5 +10,6 @@ target 'Abbiocco-iOS' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'SwiftyJSON'
+    pod 'SVProgressHUD'
 
 end
