@@ -24,11 +24,12 @@ class SignupVC: UIViewController {
         //mobileField.clearsOnBeginEditing=true
         //sleep(1)
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.view.endEditing(true)
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     
     func emailGenerate(signupModel:SignupModel){

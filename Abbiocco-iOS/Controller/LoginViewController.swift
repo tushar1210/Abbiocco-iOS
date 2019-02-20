@@ -19,7 +19,9 @@ class LoginViewController: UIViewController {
         
         
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func auth(email:String,pass:String){
         Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in
             if error != nil{
@@ -36,6 +38,17 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         if emailTextField.text?.isEmpty == false && passwordTeextField.text?.isEmpty == false {
             auth(email: emailTextField.text!, pass: passwordTeextField.text!)
+        }
+        else if (emailTextField.text?.isEmpty)!{
+            emailTextField.text = ""
+            emailTextField.placeholder = "*This Field is Mandatory"
+            emailTextField.placeHolderColor = .red
+            
+        }
+        else{
+            passwordTeextField.text = ""
+            passwordTeextField.placeholder = "*This Field is Mandatory"
+            passwordTeextField.placeHolderColor = .red
         }
         
     }
