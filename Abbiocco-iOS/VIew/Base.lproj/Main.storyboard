@@ -2850,7 +2850,6 @@
         <image name="user" width="192" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IUv-Ll-pXh"/>
         <segue reference="IJV-f9-zb8"/>
         <segue reference="SgZ-Vg-PAK"/>
         <segue reference="Xou-VI-gWQ"/>
