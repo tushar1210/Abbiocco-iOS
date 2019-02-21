@@ -24,6 +24,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var popularCollection: UICollectionView!
     @IBOutlet weak var newItemsCollection: UICollectionView!
     @IBOutlet weak var trendingCollection: UICollectionView!
+
+    @IBOutlet weak var editorImView: UIImageView!
+    @IBOutlet weak var editorRestNameLabel: UILabel!
+    @IBOutlet weak var editorTimingLabel: UILabel!
+    @IBOutlet weak var editorRatingLabel: UILabel!
     
     var modelObject = RestaurantModel()
     var json:JSON=[]
@@ -42,10 +47,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var recommendTimimg:[String]=[]
     var cuisineArray:[String]=[]
     var cuisineImageURL:[URL]=[]
-    var editorName:[String]=[]
-    var editorTiming:[String]=[]
-    var editorRating:[String]=[]
-    var editorImageURL:[URL]=[]
+    //var editorName:[String]=[]
+    //var editorTiming:[String]=[]
+    //var editorRating:[String]=[]
+    //var editorImageURL:[URL]=[]
     var popularName:[String]=[]
     var popularImageURL:[URL]=[]
     var popularFood:[String]=[]
@@ -139,13 +144,24 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
 //MARK: - EDITOR
         for (key,subJson):(String,JSON) in json["editors"]{
-            editorName.append(key)
-            editorTiming.append(json["editors"][key]["editname"].stringValue)
-            editorRating.append(json["editors"][key]["editprice"].stringValue)
-            if let url = json["editors"][key]["editimage"].string{
-                cuisineImageURL.append(URL(string: url)!)
+//            editorName.append(key)
+//            editorRestNameLabel.text
+//            editorTiming.append(json["editors"][key]["editname"].stringValue)
+//            editorRating.append(json["editors"][key]["editprice"].stringValue)
+//            if let url = json["editors"][key]["editimage"].string{
+//                cuisineImageURL.append(URL(string: url)!)
+//            }
+            editorRestNameLabel.text = key
+            print("URL ",json["editors"][key]["editimage"].stringValue)
+            editorImView.sd_setImage(with: URL(string: json["editors"][key]["editimage"].stringValue)) { (image, e, cache, url) in
+                if e != nil{
+                    print("ERROR IN EDITOR",e)
+                }
             }
+            editorTimingLabel.text = json["editors"][key]["editname"].stringValue
+            editorRatingLabel.text = json["editors"][key]["editprice"].stringValue
         }
+        
 //MARK: - TRENDING
         for (key,subJson):(String,JSON) in json["trending"]{
             trendingName.append(key)

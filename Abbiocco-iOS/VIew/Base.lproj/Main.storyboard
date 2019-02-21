@@ -1548,6 +1548,10 @@
                     <size key="freeformSize" width="414" height="2300"/>
                     <connections>
                         <outlet property="cuisineCollection" destination="lbc-co-BK6" id="Iqz-PP-FGd"/>
+                        <outlet property="editorImView" destination="Bji-Cv-jPz" id="Jr5-P4-C9y"/>
+                        <outlet property="editorRatingLabel" destination="L8j-TV-voj" id="Qii-oZ-sPt"/>
+                        <outlet property="editorRestNameLabel" destination="ijd-G0-tem" id="lOE-cP-nCZ"/>
+                        <outlet property="editorTimingLabel" destination="xrx-eT-Srl" id="hgQ-bS-29C"/>
                         <outlet property="foodTypeCollection" destination="Px7-aE-U8q" id="tS7-g2-DtE"/>
                         <outlet property="newItemsCollection" destination="aUA-w6-eA7" id="BHV-Af-M4l"/>
                         <outlet property="popularCollection" destination="T9H-nJ-5IX" id="QCH-5u-OB5"/>
