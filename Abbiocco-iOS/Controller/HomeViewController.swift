@@ -36,7 +36,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var dataRecieved = false
     var restaurantNameArray:[String] = []
     var restaurantDescriptionArray:[String] = []
-    var i=0
     var foodTypeArray:[String] = []
     var foodTypeImageURL:[URL]=[]
     var restaurantImageURLArray:[URL] = []
@@ -47,10 +46,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var recommendTimimg:[String]=[]
     var cuisineArray:[String]=[]
     var cuisineImageURL:[URL]=[]
-    //var editorName:[String]=[]
-    //var editorTiming:[String]=[]
-    //var editorRating:[String]=[]
-    //var editorImageURL:[URL]=[]
     var popularName:[String]=[]
     var popularImageURL:[URL]=[]
     var popularFood:[String]=[]
@@ -59,7 +54,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var whatsNewName:[String]=[]
     var whatsNewDesc:[String]=[]
     var whatsNewImgURL:[URL]=[]
-    
+    var dict:[String:String]=["k":"c","a":"q"]
     override func viewDidLoad() {
         super.viewDidLoad()
         getJSON()
@@ -91,21 +86,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         SVProgressHUD.setForegroundColor(.yellow)
         SVProgressHUD.show()
         self.view.isUserInteractionEnabled = false
-        self.ref.observe(.value) { (data) in
-            
+        ref.observe(DataEventType.value, with: { (data) in
             print("DATA Recieved")
-            
             self.dataRecieved = true
             self.assgin(data: JSON(data.value))
-            
-        }
+        })
     }
     
     
     func assgin(data:JSON){
         json = data
-      
-//MARK: - restaurants
+        
+        //MARK: - restaurants
+        var k=0
         for (key,subJson):(String,JSON) in json["restaurants"]{
             modelObject.name = key
             restaurantNameArray.append(modelObject.name!)
@@ -116,6 +109,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             popularName.append(json["restaurants"][key]["popname"].stringValue)
             popularFood.append(json["restaurants"][key]["popfood"].stringValue)
             popularImageURL.append(URL(string: json["restaurants"][key]["popimage"].stringValue)!)
+            print("name=  ",restaurantNameArray[k])
+            k+=1
+            
         }
         
 //MARK: - CUISINE
@@ -144,13 +140,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
 //MARK: - EDITOR
         for (key,subJson):(String,JSON) in json["editors"]{
-//            editorName.append(key)
-//            editorRestNameLabel.text
-//            editorTiming.append(json["editors"][key]["editname"].stringValue)
-//            editorRating.append(json["editors"][key]["editprice"].stringValue)
-//            if let url = json["editors"][key]["editimage"].string{
-//                cuisineImageURL.append(URL(string: url)!)
-//            }
             editorRestNameLabel.text = key
             print("URL ",json["editors"][key]["editimage"].stringValue)
             editorImView.sd_setImage(with: URL(string: json["editors"][key]["editimage"].stringValue)) { (image, e, cache, url) in
@@ -174,7 +163,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             whatsNewImgURL.append(URL(string: json["WhatsNew"][key]["editimage"].stringValue)!)
         }
         
-        
+        reloadAll()
+    }
+    
+    func reloadAll(){
         foodTypeCollection.reloadData()
         restaurantCollection.reloadData()
         recommendedCollection.reloadData()
@@ -184,9 +176,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         trendingCollection.reloadData()
         SVProgressHUD.dismiss()
         self.view.isUserInteractionEnabled = true
-        
-        
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

@@ -107,7 +107,6 @@
 				5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */,
 				5CDF31552219BA6E004017E4 /* RestaurantViewController.swift */,
 				5C2F1E7522197EBD00CA8154 /* ProfileViewController.swift */,
-				5C2F1E732219784200CA8154 /* NotificationsViewController.swift */,
 				5C2F1E71221972FF00CA8154 /* SearchViewController.swift */,
 				5C2F1E6B221943C700CA8154 /* CoreExtensions.swift */,
 				5C2F1E5C2219327000CA8154 /* Assets.xcassets */,
@@ -143,6 +142,7 @@
 				5C2F1E6D22194B2700CA8154 /* LoginViewController.swift */,
 				5C2F1E6F22194F2200CA8154 /* ForgotPasswordViewController.swift */,
 				5CDF315B221AC7F1004017E4 /* HomeViewController.swift */,
+				5C2F1E732219784200CA8154 /* NotificationsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -451,7 +451,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SDDB7WX63J;
 				INFOPLIST_FILE = "Abbiocco-iOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = abbiocco.adroitalliance.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -468,7 +471,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SDDB7WX63J;
 				INFOPLIST_FILE = "Abbiocco-iOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = abbiocco.adroitalliance.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
