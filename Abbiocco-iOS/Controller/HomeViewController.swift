@@ -49,6 +49,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var popularName:[String]=[]
     var popularImageURL:[URL]=[]
     var popularFood:[String]=[]
+    var trendingName:[String]=[]
+    var trendingImageURL:[URL]=[]
+    var whatsNewName:[String]=[]
+    var whatsNewDesc:[String]=[]
+    var whatsNewImgURL:[URL]=[]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getJSON()
@@ -140,7 +146,17 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 cuisineImageURL.append(URL(string: url)!)
             }
         }
-//MARK: - POPULAR
+//MARK: - TRENDING
+        for (key,subJson):(String,JSON) in json["trending"]{
+            trendingName.append(key)
+            trendingImageURL.append(URL(string: json["trending"][key]["popimage"].stringValue)!)
+        }
+//MARK: - WHATSNEW
+        for (key,subJson):(String,JSON) in json["WhatsNew"]{
+            whatsNewName.append(key)
+            whatsNewDesc.append(json["WhatsNew"][key]["editfood"].stringValue)
+            whatsNewImgURL.append(URL(string: json["WhatsNew"][key]["editimage"].stringValue)!)
+        }
         
         
         foodTypeCollection.reloadData()
@@ -265,7 +281,12 @@ extension HomeViewController{
         if collectionView==popularCollection{
             return popularName.count
         }
-        
+        if collectionView==trendingCollection{
+            return trendingName.count
+        }
+        if collectionView==newItemsCollection{
+            return whatsNewName.count
+        }
         
         return 5
     }
@@ -335,15 +356,23 @@ extension HomeViewController{
         }
         else if collectionView == self.newItemsCollection {
             let cell: NewItemCell = newItemsCollection.dequeueReusableCell(withReuseIdentifier: "newItemCell", for: indexPath) as! NewItemCell
-            cell.foodImage.image = UIImage(named: "food_and_gold")
-            cell.hotelName.text = "Tom's Diner"
-            cell.foodDescription.text = "A mood changing ambiance with a variety of mouthwatering options to choose them."
+            cell.foodImage.sd_setImage(with: whatsNewImgURL[indexPath.row]) { (image, e, cache, url) in
+                if e != nil{
+                    print("ERROR IN WhatsNew",e)
+                }
+            }
+            cell.hotelName.text = whatsNewName[indexPath.row]
+            cell.foodDescription.text = whatsNewDesc[indexPath.row]
             return cell
         }
         else {
             let cell: TrendingCell = trendingCollection.dequeueReusableCell(withReuseIdentifier: "trendingCell", for: indexPath) as! TrendingCell
-            cell.foodImage.image = UIImage(named: "food_and_gold")
-            cell.hotelName.text = "Tom's Diner"
+            cell.foodImage.sd_setImage(with: trendingImageURL[indexPath.row]) { (image, e, cache, url) in
+                if e != nil{
+                    print("ERROR IN TRENDING",e)
+                }
+            }
+            cell.hotelName.text = trendingName[indexPath.row]
             return cell
         }
         
