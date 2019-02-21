@@ -114,14 +114,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             
         }
         
-//MARK: - CUISINE
-        for (key,subJson):(String,JSON) in json["Food"]{
-            var keyInt = Int(key)!
-            foodTypeArray.append(json["Food"][keyInt]["cuisinetype"].stringValue)
-            if let url = json["Food"][keyInt]["cuisineimage"].string{
-                foodTypeImageURL.append(URL(string: url)!)
+//MARK: - FOOD
+        for key in 1...json["Food"].count-1{
+            foodTypeArray.append(json["Food"][key]["cuisinetype"].stringValue)
+                if let url = json["Food"][key]["cuisineimage"].string{
+                    foodTypeImageURL.append(URL(string: url)!)
             }
-            
         }
 //MARK: - Recommended
         for (key,subJson):(String,JSON) in json["Recommended"]{
@@ -272,7 +270,7 @@ extension HomeViewController{
 //PRAGMA: - reomve -1
         
         if collectionView==self.foodTypeCollection{
-            return foodTypeArray.count-1 //Remove -1 when 0 is fixed
+            return foodTypeArray.count //Remove -1 when 0 is fixed
         }
         if collectionView==self.recommendedCollection{
             return recommendNameArray.count

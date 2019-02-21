@@ -24,13 +24,12 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        get()
         SVProgressHUD.setBackgroundColor(.clear)
         SVProgressHUD.setForegroundColor(.yellow)
         SVProgressHUD.show()
+        get()
         notificationTable.dataSource = self
         notificationTable.delegate = self
-//        notificationTable.reloadData()
         notificationTable.separatorColor = UIColor.clear
         
     }
