@@ -6,6 +6,8 @@
 //  Copyright © 2019 Tushar Singh. All rights reserved.
 //
 
+//Restaurant Cell competed
+//food Type completed (zero issue to be resolved in backend)
 import UIKit
 import Firebase
 import SwiftyJSON
@@ -31,16 +33,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var restaurantDescriptionArray:[String] = []
     var i=0
     var foodTypeArray:[String] = []
+    var foodTypeImageURL:[URL]=[]
     var restaurantImageURLArray:[URL] = []
     var restaurantRatingArray:[String] = []
     var restaurantTimingArray:[String] = []
-
     var recommendNameArray:[String]=[]
-    
+    var recommendImageURL:[URL]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        get()
+        getJSON()
         foodTypeCollection.dataSource = self
         foodTypeCollection.delegate = self
         
@@ -64,7 +66,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Do any additional setup after loading the view.
     }
     
-    func get(){
+    func getJSON(){
         SVProgressHUD.setBackgroundColor(.clear)
         SVProgressHUD.setForegroundColor(.yellow)
         SVProgressHUD.show()
@@ -82,6 +84,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func assgin(data:JSON){
         json = data
+      
+//MARK: - restaurants
         for (key,subJson):(String,JSON) in json["restaurants"]{
             modelObject.name = key
             restaurantNameArray.append(modelObject.name!)
@@ -91,15 +95,23 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             restaurantTimingArray.append(json["restaurants"][key]["time"].stringValue)
         }
         
-
+//MARK: - CUISINE
         for (key,subJson):(String,JSON) in json["Food"]{
             var keyInt = Int(key)!
             foodTypeArray.append(json["Food"][keyInt]["cuisinetype"].stringValue)
+            if let url = json["Food"][keyInt]["cuisineimage"].string{
+                foodTypeImageURL.append(URL(string: url)!)
+            }
+            
         }
-        
-        
+//MARK: - Recommended
         for (key,subJson):(String,JSON) in json["Recommended"]{
             recommendNameArray.append(key)
+            if let url = json["Recommended"][key]["editimage"].string{
+                recommendImageURL.append(URL(string: url)!)
+                
+                
+            }
         }
         
         foodTypeCollection.reloadData()
@@ -207,8 +219,13 @@ extension HomeViewController{
         if collectionView==self.restaurantCollection{
             return restaurantNameArray.count
         }
+//PRAGMA: - reomve -1
+        
         if collectionView==self.foodTypeCollection{
-            return foodTypeArray.count
+            return foodTypeArray.count-1 //Remove -1 when 0 is fixed
+        }
+        if collectionView==self.recommendedCollection{
+            return recommendNameArray.count
         }
         return 5
     }
@@ -216,7 +233,12 @@ extension HomeViewController{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.foodTypeCollection {
             let cell: FoodTypeCell = foodTypeCollection.dequeueReusableCell(withReuseIdentifier: "foodTypeCell", for: indexPath) as! FoodTypeCell
-            cell.foodImage.image = UIImage(named: "food_and_gold")
+            cell.foodImage.sd_setImage(with: foodTypeImageURL[indexPath.row]) { (image, e, cache, url) in
+                if e != nil{
+                    print("ERROR in FOOD TYPE IMAGE", e)
+                }
+
+            }
             cell.foodImage.layer.cornerRadius = cell.foodImage.frame.size.width/2
             cell.foodName.text = foodTypeArray[indexPath.row]
             return cell
@@ -225,7 +247,9 @@ extension HomeViewController{
             
             let cell: RestaurantCell = restaurantCollection.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantCell
             cell.hotelImage.sd_setImage(with: restaurantImageURLArray[indexPath.row]) { (image, e, cacheType, url) in
-                
+                if e != nil{
+                    print("ERROR in FOOD TYPE IMAGE", e)
+                }
             }
             cell.hotelName.text = restaurantNameArray[indexPath.row]
             cell.hotelType.text = restaurantDescriptionArray[indexPath.row]
@@ -235,8 +259,14 @@ extension HomeViewController{
         }
         else if collectionView == self.recommendedCollection {
             let cell: RecommendedCell = recommendedCollection.dequeueReusableCell(withReuseIdentifier: "recommendedCell", for: indexPath) as! RecommendedCell
-            cell.foodImage.image = UIImage(named: "food_and_gold")
-            cell.hotelName.text = "Tom's Diner"
+           
+            cell.foodImage.sd_setImage(with: recommendImageURL[indexPath.row]) { (image, e, cache, url) in
+                if e != nil{
+                    print("ERROR IN RECOMMEND",e)
+                    }
+                }
+            cell.hotelName.text = recommendNameArray[indexPath.row]
+            
             cell.hotelSchedule.text = "10:00am - 9:00pm"
             return cell
         }
