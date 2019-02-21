@@ -26,7 +26,7 @@
 		5D1FF900A40C3680A51D41FF /* Pods_Abbiocco_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1A7500544A8F10FC9787B9 /* Pods_Abbiocco_iOS.framework */; };
 		78B15DEB221C376F00264D75 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B15DEA221C376F00264D75 /* SignupModel.swift */; };
 		78B15DED221C381C00264D75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78B15DEC221C381B00264D75 /* GoogleService-Info.plist */; };
-		78B15DF2221D4B6300264D75 /* ResturantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B15DF1221D4B6300264D75 /* ResturantModel.swift */; };
+		78B15DF2221D4B6300264D75 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B15DF1221D4B6300264D75 /* RestaurantModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +52,7 @@
 		78B15DEA221C376F00264D75 /* SignupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		78B15DEC221C381B00264D75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78B15DEE221C38CD00264D75 /* Abbiocco-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Abbiocco-iOS.entitlements"; sourceTree = "<group>"; };
-		78B15DF1221D4B6300264D75 /* ResturantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantModel.swift; sourceTree = "<group>"; };
+		78B15DF1221D4B6300264D75 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		DF1A7500544A8F10FC9787B9 /* Pods_Abbiocco_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abbiocco_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29B1D34481A054F18F8C16E /* Pods-Abbiocco-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abbiocco-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abbiocco-iOS/Pods-Abbiocco-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +104,6 @@
 				78B15DEF221C664A00264D75 /* Controller */,
 				78B15DEE221C38CD00264D75 /* Abbiocco-iOS.entitlements */,
 				5C2F1E522219326900CA8154 /* AppDelegate.swift */,
-				5CDF315B221AC7F1004017E4 /* HomeViewController.swift */,
 				5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */,
 				5CDF31552219BA6E004017E4 /* RestaurantViewController.swift */,
 				5C2F1E7522197EBD00CA8154 /* ProfileViewController.swift */,
@@ -131,7 +130,7 @@
 		78590A77221BF794004C7552 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				78B15DF1221D4B6300264D75 /* ResturantModel.swift */,
+				78B15DF1221D4B6300264D75 /* RestaurantModel.swift */,
 				78B15DEA221C376F00264D75 /* SignupModel.swift */,
 			);
 			path = Model;
@@ -143,6 +142,7 @@
 				5C2F1E542219326900CA8154 /* SignupVC.swift */,
 				5C2F1E6D22194B2700CA8154 /* LoginViewController.swift */,
 				5C2F1E6F22194F2200CA8154 /* ForgotPasswordViewController.swift */,
+				5CDF315B221AC7F1004017E4 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +241,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abbiocco-iOS/Pods-Abbiocco-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -250,6 +251,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -291,7 +293,7 @@
 				5C2F1E552219326900CA8154 /* SignupVC.swift in Sources */,
 				5C2F1E7022194F2200CA8154 /* ForgotPasswordViewController.swift in Sources */,
 				5C2F1E5B2219326900CA8154 /* Abbiocco_iOS.xcdatamodeld in Sources */,
-				78B15DF2221D4B6300264D75 /* ResturantModel.swift in Sources */,
+				78B15DF2221D4B6300264D75 /* RestaurantModel.swift in Sources */,
 				78B15DEB221C376F00264D75 /* SignupModel.swift in Sources */,
 				5C2F1E6E22194B2700CA8154 /* LoginViewController.swift in Sources */,
 				5C2F1E7622197EBD00CA8154 /* ProfileViewController.swift in Sources */,

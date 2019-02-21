@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class ResturantModel{
+class RestaurantModel{
     var name : String? = ""
     var address : String? = ""
     var description : String? = ""

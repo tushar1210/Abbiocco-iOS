@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import SwiftyJSON
 import SVProgressHUD
+import SDWebImage
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -22,12 +23,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var newItemsCollection: UICollectionView!
     @IBOutlet weak var trendingCollection: UICollectionView!
     
-    var modelObject = ResturantModel()
+    var modelObject = RestaurantModel()
     var json:JSON=[]
     let ref = Database.database().reference()
     var dataRecieved = false
-    var resturantNameArray:[String] = []
-    
+    var restaurantNameArray:[String] = []
+    var restaurantDescriptionArray:[String] = []
+    var i=0
+    var foodTypeArray:[String] = []
+    var restaurantImageURLArray:[URL] = []
+    var restaurantRatingArray:[String] = []
+    var restaurantTimingArray:[String] = []
+
+    var recommendNameArray:[String]=[]
     
     
     override func viewDidLoad() {
@@ -71,11 +79,27 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
+    
     func assgin(data:JSON){
         json = data
-        for (key,subJSON):(String,JSON) in json["restaurants"]{
+        for (key,subJson):(String,JSON) in json["restaurants"]{
             modelObject.name = key
-            resturantNameArray.append(modelObject.name!)
+            restaurantNameArray.append(modelObject.name!)
+            restaurantDescriptionArray.append(json["restaurants"][key]["description"].stringValue)
+            restaurantImageURLArray.append(URL(string: json["restaurants"][key]["image"].stringValue)!)
+            restaurantRatingArray.append(json["restaurants"][key]["rate"].stringValue)
+            restaurantTimingArray.append(json["restaurants"][key]["time"].stringValue)
+        }
+        
+
+        for (key,subJson):(String,JSON) in json["Food"]{
+            var keyInt = Int(key)!
+            foodTypeArray.append(json["Food"][keyInt]["cuisinetype"].stringValue)
+        }
+        
+        
+        for (key,subJson):(String,JSON) in json["Recommended"]{
+            recommendNameArray.append(key)
         }
         
         foodTypeCollection.reloadData()
@@ -98,9 +122,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
 
-
-
-
+    
 
 }
 
@@ -182,6 +204,12 @@ class TrendingCell: UICollectionViewCell{
 extension HomeViewController{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView==self.restaurantCollection{
+            return restaurantNameArray.count
+        }
+        if collectionView==self.foodTypeCollection{
+            return foodTypeArray.count
+        }
         return 5
     }
     
@@ -190,42 +218,51 @@ extension HomeViewController{
             let cell: FoodTypeCell = foodTypeCollection.dequeueReusableCell(withReuseIdentifier: "foodTypeCell", for: indexPath) as! FoodTypeCell
             cell.foodImage.image = UIImage(named: "food_and_gold")
             cell.foodImage.layer.cornerRadius = cell.foodImage.frame.size.width/2
-            cell.foodName.text = "Food name"
+            cell.foodName.text = foodTypeArray[indexPath.row]
             return cell
-        } else if (collectionView == self.restaurantCollection){
+        }
+        else if (collectionView == self.restaurantCollection){
+            
             let cell: RestaurantCell = restaurantCollection.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantCell
-            cell.hotelImage.image = UIImage(named: "food_and_gold")
-            cell.hotelName.text = "Tom's Diner"
-            cell.hotelType.text = "American (Traditional), Continental"
-            cell.hotelRating.text = "4.5"
-            cell.hotelSchedule.text = "10:00am - 9:00pm"
+            cell.hotelImage.sd_setImage(with: restaurantImageURLArray[indexPath.row]) { (image, e, cacheType, url) in
+                
+            }
+            cell.hotelName.text = restaurantNameArray[indexPath.row]
+            cell.hotelType.text = restaurantDescriptionArray[indexPath.row]
+            cell.hotelRating.text = restaurantRatingArray[indexPath.row]
+            cell.hotelSchedule.text = restaurantTimingArray[indexPath.row]
             return cell
-        } else if collectionView == self.recommendedCollection {
+        }
+        else if collectionView == self.recommendedCollection {
             let cell: RecommendedCell = recommendedCollection.dequeueReusableCell(withReuseIdentifier: "recommendedCell", for: indexPath) as! RecommendedCell
             cell.foodImage.image = UIImage(named: "food_and_gold")
             cell.hotelName.text = "Tom's Diner"
             cell.hotelSchedule.text = "10:00am - 9:00pm"
             return cell
-        } else if ( collectionView == self.cuisineCollection ){
+        }
+        else if ( collectionView == self.cuisineCollection ){
             let cell: CuisineTypeCell = cuisineCollection.dequeueReusableCell(withReuseIdentifier: "cuisineTypeCell", for: indexPath) as! CuisineTypeCell
             cell.foodImage.image = UIImage(named: "food_and_gold")
             cell.foodImage.layer.cornerRadius = cell.foodImage.frame.size.width/2
             
             cell.foodName.text = "Food name"
             return cell
-        } else if collectionView == self.popularCollection {
+        }
+        else if collectionView == self.popularCollection {
             let cell: PopularCell = popularCollection.dequeueReusableCell(withReuseIdentifier: "popularCell", for: indexPath) as! PopularCell
             cell.foodImage.image = UIImage(named: "food_and_gold")
             cell.hotelName.text = "Tom's Diner"
             cell.foodName.text = "Veg Noodles"
             return cell
-        } else if collectionView == self.newItemsCollection {
+        }
+        else if collectionView == self.newItemsCollection {
             let cell: NewItemCell = newItemsCollection.dequeueReusableCell(withReuseIdentifier: "newItemCell", for: indexPath) as! NewItemCell
             cell.foodImage.image = UIImage(named: "food_and_gold")
             cell.hotelName.text = "Tom's Diner"
             cell.foodDescription.text = "A mood changing ambiance with a variety of mouthwatering options to choose them."
             return cell
-        } else {
+        }
+        else {
             let cell: TrendingCell = trendingCollection.dequeueReusableCell(withReuseIdentifier: "trendingCell", for: indexPath) as! TrendingCell
             cell.foodImage.image = UIImage(named: "food_and_gold")
             cell.hotelName.text = "Tom's Diner"
@@ -239,4 +276,18 @@ extension HomeViewController{
     }
     
 
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }
