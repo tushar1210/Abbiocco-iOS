@@ -102,16 +102,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         for (key,subJson):(String,JSON) in json["restaurants"]{
             modelObject.name = key
             restaurantNameArray.append(modelObject.name!)
-            restaurantDescriptionArray.append(json["restaurants"][key]["description"].stringValue)
-            restaurantImageURLArray.append(URL(string: json["restaurants"][key]["image"].stringValue)!)
-            restaurantRatingArray.append(json["restaurants"][key]["rate"].stringValue)
-            restaurantTimingArray.append(json["restaurants"][key]["time"].stringValue)
-            popularName.append(json["restaurants"][key]["popname"].stringValue)
-            popularFood.append(json["restaurants"][key]["popfood"].stringValue)
-            popularImageURL.append(URL(string: json["restaurants"][key]["popimage"].stringValue)!)
-            print("name=  ",restaurantNameArray[k])
-            k+=1
-            
+        }
+        
+         restaurantNameArray = self.restaurantNameArray.sorted(by: <)
+        for(key) in restaurantNameArray{
+                restaurantDescriptionArray.append(json["restaurants"][key]["description"].stringValue)
+                restaurantImageURLArray.append(URL(string: json["restaurants"][key]["image"].stringValue)!)
+                restaurantRatingArray.append(json["restaurants"][key]["rate"].stringValue)
+                restaurantTimingArray.append(json["restaurants"][key]["time"].stringValue)
+                popularName.append(json["restaurants"][key]["popname"].stringValue)
+                popularFood.append(json["restaurants"][key]["popfood"].stringValue)
+                popularImageURL.append(URL(string: json["restaurants"][key]["popimage"].stringValue)!)
+                print("name=  ",restaurantNameArray[k])
+                k+=1
         }
         
 //MARK: - FOOD
