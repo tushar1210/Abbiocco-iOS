@@ -93,7 +93,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         })
     }
     
-    
+    func sortArray(arr:[String])->[String]{
+        
+        return arr
+    }
     func assgin(data:JSON){
         json = data
         
@@ -155,13 +158,28 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 //MARK: - TRENDING
         for (key,subJson):(String,JSON) in json["trending"]{
             trendingName.append(key)
+        }
+        trendingName = trendingName.sorted(by: <)
+        for (key) in trendingName{
             trendingImageURL.append(URL(string: json["trending"][key]["popimage"].stringValue)!)
         }
+        
 //MARK: - WHATSNEW
+        k=0
         for (key,subJson):(String,JSON) in json["WhatsNew"]{
             whatsNewName.append(key)
+//            print("KEY = ",whatsNewName[k],whatsNewName.count)
+            k+=1
+        }
+        whatsNewName = self.whatsNewName.sorted(by: <)
+        
+        for (key) in whatsNewName{
+            print("KEY = ",key)
             whatsNewDesc.append(json["WhatsNew"][key]["editfood"].stringValue)
-            whatsNewImgURL.append(URL(string: json["WhatsNew"][key]["editimage"].stringValue)!)
+            if let url = json["WhatsNew"][String(key)]["editimage"].string{
+                whatsNewImgURL.append(URL(string: url)!)
+                print("COunt =",whatsNewImgURL.count)
+            }
         }
         
         reloadAll()

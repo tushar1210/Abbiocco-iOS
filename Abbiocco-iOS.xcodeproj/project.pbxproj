@@ -102,7 +102,6 @@
 				78590A77221BF794004C7552 /* Model */,
 				78B15DF0221C6BA000264D75 /* VIew */,
 				78B15DEF221C664A00264D75 /* Controller */,
-				78B15DEE221C38CD00264D75 /* Abbiocco-iOS.entitlements */,
 				5C2F1E522219326900CA8154 /* AppDelegate.swift */,
 				5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */,
 				5CDF31552219BA6E004017E4 /* RestaurantViewController.swift */,
@@ -114,6 +113,7 @@
 				78B15DEC221C381B00264D75 /* GoogleService-Info.plist */,
 				5CDF3157221AA837004017E4 /* food_and_gold.jpg */,
 				5C2F1E592219326900CA8154 /* Abbiocco_iOS.xcdatamodeld */,
+				78B15DEE221C38CD00264D75 /* Abbiocco-iOS.entitlements */,
 			);
 			path = "Abbiocco-iOS";
 			sourceTree = "<group>";
