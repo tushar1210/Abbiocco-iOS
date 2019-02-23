@@ -21,13 +21,12 @@ class SignupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //mobileField.clearsOnBeginEditing=true
-        //sleep(1)
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.isUserInteractionEnabled = true
+
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        print("TOUCH")
     }
 
     

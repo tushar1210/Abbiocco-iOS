@@ -100,7 +100,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     func assgin(data:JSON){
         json = data
         
-        //MARK: - restaurants
+        //MARK: - restaurants  
         var k=0
         for (key,subJson):(String,JSON) in json["restaurants"]{
             modelObject.name = key
@@ -121,6 +121,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
         
 //MARK: - FOOD
+        
+        
         for key in 1...json["Food"].count-1{
             foodTypeArray.append(json["Food"][key]["cuisinetype"].stringValue)
                 if let url = json["Food"][key]["cuisineimage"].string{
@@ -130,14 +132,23 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 //MARK: - Recommended
         for (key,subJson):(String,JSON) in json["Recommended"]{
             recommendNameArray.append(key)
+        }
+        recommendNameArray = recommendNameArray.sorted(by: <)
+        
+        for (key) in recommendNameArray{
+            
             recommendTimimg.append(json["Recommended"][key]["editname"].stringValue)
             if let url = json["Recommended"][key]["editimage"].string{
                 recommendImageURL.append(URL(string: url)!)
             }
         }
 //MARK: - Cuisine
+       
         for (key,subJson):(String,JSON) in json["Cuisine"]{
             cuisineArray.append(key)
+        }
+        cuisineArray = cuisineArray.sorted(by: <)
+        for (key) in cuisineArray{
             if let url = json["Cuisine"][key]["cuisineimage"].string{
                 cuisineImageURL.append(URL(string: url)!)
             }

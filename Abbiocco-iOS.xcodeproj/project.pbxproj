@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5C2F1E532219326900CA8154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E522219326900CA8154 /* AppDelegate.swift */; };
 		5C2F1E552219326900CA8154 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E542219326900CA8154 /* SignupVC.swift */; };
-		5C2F1E582219326900CA8154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F1E562219326900CA8154 /* Main.storyboard */; };
 		5C2F1E5B2219326900CA8154 /* Abbiocco_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F1E592219326900CA8154 /* Abbiocco_iOS.xcdatamodeld */; };
 		5C2F1E5D2219327000CA8154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F1E5C2219327000CA8154 /* Assets.xcassets */; };
 		5C2F1E602219327000CA8154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2F1E5E2219327000CA8154 /* LaunchScreen.storyboard */; };
@@ -24,6 +23,7 @@
 		5CDF315A221AAD47004017E4 /* FavourtiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */; };
 		5CDF315C221AC7F1004017E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF315B221AC7F1004017E4 /* HomeViewController.swift */; };
 		5D1FF900A40C3680A51D41FF /* Pods_Abbiocco_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1A7500544A8F10FC9787B9 /* Pods_Abbiocco_iOS.framework */; };
+		7879C7052221879600B52D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7879C7032221879600B52D6F /* Main.storyboard */; };
 		78B15DEB221C376F00264D75 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B15DEA221C376F00264D75 /* SignupModel.swift */; };
 		78B15DED221C381C00264D75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78B15DEC221C381B00264D75 /* GoogleService-Info.plist */; };
 		78B15DF2221D4B6300264D75 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B15DF1221D4B6300264D75 /* RestaurantModel.swift */; };
@@ -34,7 +34,6 @@
 		5C2F1E4F2219326900CA8154 /* Abbiocco-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Abbiocco-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2F1E522219326900CA8154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C2F1E542219326900CA8154 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
-		5C2F1E572219326900CA8154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C2F1E5A2219326900CA8154 /* Abbiocco_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Abbiocco_iOS.xcdatamodel; sourceTree = "<group>"; };
 		5C2F1E5C2219327000CA8154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2F1E5F2219327000CA8154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		5CDF3157221AA837004017E4 /* food_and_gold.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food_and_gold.jpg; sourceTree = "<group>"; };
 		5CDF3159221AAD47004017E4 /* FavourtiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavourtiesViewController.swift; sourceTree = "<group>"; };
 		5CDF315B221AC7F1004017E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7879C7042221879600B52D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../../../Volumes/STRONTIUM/Abbiocco-iOS/Abbiocco-iOS/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		78B15DEA221C376F00264D75 /* SignupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		78B15DEC221C381B00264D75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78B15DEE221C38CD00264D75 /* Abbiocco-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Abbiocco-iOS.entitlements"; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		78B15DF0221C6BA000264D75 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				5C2F1E562219326900CA8154 /* Main.storyboard */,
+				7879C7032221879600B52D6F /* Main.storyboard */,
 				5C2F1E5E2219327000CA8154 /* LaunchScreen.storyboard */,
 			);
 			path = VIew;
@@ -222,9 +222,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C2F1E602219327000CA8154 /* LaunchScreen.storyboard in Resources */,
+				7879C7052221879600B52D6F /* Main.storyboard in Resources */,
 				5C2F1E5D2219327000CA8154 /* Assets.xcassets in Resources */,
 				78B15DED221C381C00264D75 /* GoogleService-Info.plist in Resources */,
-				5C2F1E582219326900CA8154 /* Main.storyboard in Resources */,
 				5CDF3158221AA837004017E4 /* food_and_gold.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,20 +307,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5C2F1E562219326900CA8154 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C2F1E572219326900CA8154 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C2F1E5E2219327000CA8154 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5C2F1E5F2219327000CA8154 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7879C7032221879600B52D6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7879C7042221879600B52D6F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
