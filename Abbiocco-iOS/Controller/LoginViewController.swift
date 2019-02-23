@@ -10,13 +10,14 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTeextField: UITextField!
+
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        RunLoop.current.run(until: Date(timeIntervalSinceNow: 1))
+        UIApplication.shared.statusBarStyle = .lightContent
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        statusBar.backgroundColor =  UIColor(red: CGFloat(255/255.0), green: CGFloat(166/255.0), blue: CGFloat(0/255.0), alpha: CGFloat(1.0))
         FirebaseApp.configure()
         return true
     }
@@ -93,3 +97,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UINavigationController {
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return topViewController?.preferredStatusBarStyle ?? .lightContent
+    }
+}
