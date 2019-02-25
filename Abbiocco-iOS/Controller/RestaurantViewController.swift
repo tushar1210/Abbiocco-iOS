@@ -9,6 +9,39 @@
 import UIKit
 
 class RestaurantViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    var restaurantName = ""
+
+    @IBOutlet weak var featureCollection: UICollectionView!
+    @IBOutlet weak var reviewCollection: UICollectionView!
+    @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet weak var restaurantNameLabel: UILabel!
+    @IBOutlet weak var restaurantTypeLabel: UILabel!
+    @IBOutlet weak var restaurantTimingsLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var viewFullMenuButton: UIButton!
+    @IBOutlet weak var viewAllButton: UIButton!
+    @IBOutlet weak var ratingsLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        featureCollection.delegate = self
+        featureCollection.dataSource = self
+        
+        reviewCollection.delegate = self
+        reviewCollection.dataSource = self
+        
+        print("Restaurant = ",restaurantName)
+        
+    } 
+    
+    @IBAction func featureItemButton(_ sender: Any) {
+        
+    }
+
+}
+
+
+extension RestaurantViewController{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -31,40 +64,17 @@ class RestaurantViewController: UIViewController, UICollectionViewDelegate, UICo
         }
     }
     
-
-    
-    
-    
-    @IBOutlet weak var featureCollection: UICollectionView!
-    
-    
-    @IBOutlet weak var reviewCollection: UICollectionView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        featureCollection.delegate = self
-    
-        featureCollection.dataSource = self
-        
-        reviewCollection.delegate = self
-        reviewCollection.dataSource = self
-        
-    }
-    
-    
-    
 }
+
+
 
 
 class FeatureViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var featureImage: UIImageView!
-    
     @IBOutlet weak var featuredItemName: UILabel!
-    
     @IBOutlet weak var featuredItemDescription: UITextView!
-    
     @IBOutlet weak var featuredItemPriceButton: UIButton!
 }
 
@@ -72,9 +82,7 @@ class FeatureViewCell: UICollectionViewCell {
 class ReviewCell: UICollectionViewCell{
     
     @IBOutlet weak var reviewImage: UIImageView!
-    
     @IBOutlet weak var reviewLabel: UILabel!
-    
     @IBOutlet weak var reviewDescription: UITextView!
     
 }
