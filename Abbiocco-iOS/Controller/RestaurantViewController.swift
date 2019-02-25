@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import SDWebImage
+import SwiftyJSON
 
 class RestaurantViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    var restaurantName = ""
 
     @IBOutlet weak var featureCollection: UICollectionView!
     @IBOutlet weak var reviewCollection: UICollectionView!
@@ -21,6 +23,8 @@ class RestaurantViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var viewFullMenuButton: UIButton!
     @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var ratingsLabel: UILabel!
+    
+    var restaurantName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +60,7 @@ extension RestaurantViewController{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == self.featureCollection {
-            let cell = featureCollection.dequeueReusableCell(withReuseIdentifier: "featuredViewCell", for: indexPath)
+            let cell = featureCollection.dequeueReusableCell(withReuseIdentifier: "featureViewCell", for: indexPath)
             return cell
         } else {
             let cell = reviewCollection.dequeueReusableCell(withReuseIdentifier: "reviewCell", for: indexPath)

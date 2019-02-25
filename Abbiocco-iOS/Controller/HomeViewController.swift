@@ -61,10 +61,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         getTime()
         getJSON()
         //getName()
-        
         
         foodTypeCollection.dataSource = self
         foodTypeCollection.delegate = self
@@ -90,6 +90,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         // Do any additional setup after loading the view.
     }
+    
+    @objc func imageTapped(sender : MyTapGesture) {
+        let name = sender.restaurantNamePass
+        print("NAME==",name)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RestaurantMain") as! RestaurantViewController
+        vc.restaurantName = name
+        present(vc, animated: true, completion: nil)
+    
+    }
+
     func getTime(){
         let date = Date()
         let calendar = Calendar.current
@@ -128,6 +138,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.assgin(data: JSON(data.value))
         })
     }
+    
+
     
     func sortArray(arr:[String])->[String]{
         
@@ -246,17 +258,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         return style
     }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
 
-
-        //performSegue(withIdentifier: "restaurant", sender: nil)
-    }
 }
 
 
 //MARK: - UIelements
 extension HomeViewController{
+    
+   
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView==self.restaurantCollection{
@@ -311,11 +320,12 @@ extension HomeViewController{
                 }
             }
             
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+
             cell.hotelImage.isUserInteractionEnabled = true
-            cell.hotelImage.addGestureRecognizer(tapGestureRecognizer)
-            
             cell.hotelName.text = restaurantNameArray[indexPath.row]
+            let tap = MyTapGesture(target: self, action: #selector(self.imageTapped))
+            tap.restaurantNamePass = cell.hotelName.text!
+            cell.hotelImage.addGestureRecognizer(tap)
             cell.hotelType.text = restaurantDescriptionArray[indexPath.row]
             cell.hotelRating.text = restaurantRatingArray[indexPath.row]
             cell.hotelSchedule.text = restaurantTimingArray[indexPath.row]
@@ -386,6 +396,9 @@ extension HomeViewController{
     }
     
     
+}
+class MyTapGesture: UITapGestureRecognizer {
+    var restaurantNamePass = String()
 }
 
 extension UIImageView {
