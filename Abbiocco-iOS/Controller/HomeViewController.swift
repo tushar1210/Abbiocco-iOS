@@ -61,7 +61,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
         getTime()
         getJSON()
         //getName()
@@ -97,7 +97,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RestaurantMain") as! RestaurantViewController
         vc.restaurantName = name
         present(vc, animated: true, completion: nil)
-    
+        print("DONE")
     }
 
     func getTime(){
@@ -105,13 +105,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
             print("HOUR--",hour)
-        if(hour >= 5){
+        if(hour >= 5&&hour<12){
             greetingLabel.text = "Good Morning"
         }
-        else if(hour >= 12 ){
+        else if(hour >= 12 && hour<17){
             greetingLabel.text="Good Afternoon"
         }
-        else if(hour >= 17){
+        else if(hour >= 17 && hour<23){
             greetingLabel.text="Good Evening"
         }
         else if(hour>=23 || hour<5){
@@ -141,10 +141,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
 
     
-    func sortArray(arr:[String])->[String]{
-        
-        return arr
-    }
     func assgin(data:JSON){
         json = data
         
