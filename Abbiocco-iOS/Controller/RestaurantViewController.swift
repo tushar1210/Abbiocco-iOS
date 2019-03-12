@@ -133,7 +133,7 @@ class RestaurantViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     @IBAction func featureItemButton(_ sender: Any) {
-        
+        print("clicked")
     }
     
 
@@ -168,28 +168,25 @@ extension RestaurantViewController{
         
         if collectionView == self.featureCollection {
             let cell = featureCollection.dequeueReusableCell(withReuseIdentifier: "featureViewCell", for: indexPath) as! FeatureViewCell
-                cell.featuredItemName.text = featureName[indexPath.row+1]
-                cell.featureImage.sd_setImage(with: URL(string: featureImage[indexPath.row])) { (image, e, cache, url) in
+            cell.featuredItemName.text = featureName[indexPath.row+1]
+            cell.featureImage.sd_setImage(with: URL(string: featureImage[indexPath.row])) { (image, e, cache, url) in
                     if e != nil{
                         print("ERROR IN FEATURE",e!)
                     }
                 }
+            cell.featuredItemDescription.text = featureDescription[indexPath.row]
+            cell.featuredItemPriceButton.isEnabled=false
+            cell.featuredItemPriceButton.setTitle(featurePrice[indexPath.row], for: .normal)
+            cell.featuredItemPriceButton.isEnabled = true
+            return cell
             
-                cell.featuredItemDescription.text = featureDescription[indexPath.row]
-                cell.featuredItemPriceButton.titleLabel?.text = featurePrice[indexPath.row]
-                return cell
         }
         else {
             
             let cell = reviewCollection.dequeueReusableCell(withReuseIdentifier: "reviewCell", for: indexPath) as! ReviewCell
             cell.reviewDescription.text = reviewDescription[indexPath.row]
             cell.reviewLabel.text = reviewLabel[indexPath.row]
-            print("IMG = ",reviewImage[indexPath.row])
-//            cell.reviewImage.sd_setImage(with: URL(string: reviewImage[indexPath.row])) { (image, e, cache, urk) in
-//                if e != nil{
-//                    print("ERROR IN REVIEW ",e!)
-//                }
-//            }
+            
             
             
             
@@ -209,6 +206,7 @@ class FeatureViewCell: UICollectionViewCell {
     @IBOutlet weak var featuredItemName: UILabel!
     @IBOutlet weak var featuredItemDescription: UITextView!
     @IBOutlet weak var featuredItemPriceButton: UIButton!
+
 }
 
 

@@ -27,7 +27,7 @@
 		78B15DED221C381C00264D75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78B15DEC221C381B00264D75 /* GoogleService-Info.plist */; };
 		78B15DF2221D4B6300264D75 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B15DF1221D4B6300264D75 /* RestaurantModel.swift */; };
 		78FE80CF22245CAC00737FE1 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FE80CE22245CAC00737FE1 /* SearchTableViewCell.swift */; };
-		78FE80D3222471FB00737FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FE80D2222471FB00737FE1 /* Main.storyboard */; };
+		78FE80D52228D9CF00737FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FE80D42228D9CF00737FE1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +54,7 @@
 		78B15DEE221C38CD00264D75 /* Abbiocco-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Abbiocco-iOS.entitlements"; sourceTree = "<group>"; };
 		78B15DF1221D4B6300264D75 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		78FE80CE22245CAC00737FE1 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		78FE80D2222471FB00737FE1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		78FE80D42228D9CF00737FE1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DF1A7500544A8F10FC9787B9 /* Pods_Abbiocco_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abbiocco_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29B1D34481A054F18F8C16E /* Pods-Abbiocco-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abbiocco-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abbiocco-iOS/Pods-Abbiocco-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +152,7 @@
 		78B15DF0221C6BA000264D75 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				78FE80D2222471FB00737FE1 /* Main.storyboard */,
+				78FE80D42228D9CF00737FE1 /* Main.storyboard */,
 				5C2F1E5E2219327000CA8154 /* LaunchScreen.storyboard */,
 				78FE80CE22245CAC00737FE1 /* SearchTableViewCell.swift */,
 			);
@@ -225,7 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C2F1E602219327000CA8154 /* LaunchScreen.storyboard in Resources */,
-				78FE80D3222471FB00737FE1 /* Main.storyboard in Resources */,
+				78FE80D52228D9CF00737FE1 /* Main.storyboard in Resources */,
 				5C2F1E5D2219327000CA8154 /* Assets.xcassets in Resources */,
 				78B15DED221C381C00264D75 /* GoogleService-Info.plist in Resources */,
 				5CDF3158221AA837004017E4 /* food_and_gold.jpg in Resources */,
